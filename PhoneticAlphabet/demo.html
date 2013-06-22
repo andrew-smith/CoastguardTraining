@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Phonetic Alphabet</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/cupertino/jquery-ui.min.css">
+    
+    <script src="phonetic-alphabet.js"></script>
+    
+    <style>
+        body{ text-align:center;}
+        div#wrapper{ position:relative; margin-left:auto; margin-right:auto; width:800px; }
+    </style>
+</head>
+<body>
+    <script>
+    $(function() {
+        $("#tabs").tabs();
+        
+        //tab indices
+        var DI_TAB = 0, 
+            RL_TAB = 1,
+            AL_TAB = 2;
+        
+        //direct input
+        $("#di-input").keyup(function() {
+            $("#di-output").text(formatText(PA($("#di-input").val())));
+        });
+        
+        
+        //random letter
+        (function() {
+            var isRevealed = true;
+            
+            $("#rl-button").click(function() {
+                if(isRevealed) //move to next letter
+                {
+                    $("#rl-letter").text(randomLetter());
+                    $("#rl-answer").text("?");
+                    isRevealed = false;
+                    $("#rl-button").text("Reveal");
+                }
+                else
+                {
+                    $("#rl-answer").text(PA($("#rl-letter").text()));
+                    isRevealed = true;
+                    $("#rl-button").text("Next");
+                }
+            });
+        })();
+        
+        
+        //auckland locations
+        (function() {
+            var isRevealed = true;
+            
+            var currentWord = "";
+            var wordProgress = "";
+            var currentIndex = 0;
+            
+            $("#al-button").click(function() {
+                if(isRevealed) //move to next word
+                {
+                    //get new random auckland word
+                    currentWord = aucklandNames[Math.floor(Math.random() * aucklandNames.length)];
+                    wordProgress = "";
+                    currentIndex = 0;
+                    
+                    isRevealed = false;
+                    $("#al-button").text("Reveal");
+                }
+                else
+                {
+                    var characterDone = false
+                    while(!characterDone && currentIndex <= currentWord.length)
+                    {
+                        var nextChar = currentWord.charAt(currentIndex);
+                        currentIndex++;
+                        var paValue = PA(nextChar);
+                        
+                        if(paValue)
+                        {
+                            wordProgress += paValue + " ";
+                            characterDone = true;
+                        }
+                        else
+                        {
+                            if(nextChar == " ")
+                                wordProgress += "[space] ";
+                            else 
+                                wordProgress += nextChar + " ";
+                        }
+                    }
+                    
+                    if(currentIndex >= currentWord.length)
+                    {
+                        isRevealed = true;
+                        $("#al-button").text("Next Word");
+                    }
+                }
+                
+                $("#al-location").text(currentWord);
+                if(currentIndex == 0)
+                    $("#al-answer").text(".");
+                else
+                    $("#al-answer").text(wordProgress);
+                
+                
+            });
+            
+            //listen for keyboard events
+            $(document).keyup(function(e) {
+                if(selectedTab() == AL_TAB)
+                {
+                    //right arrow or enter button
+                    if(e.which == 39 || e.which == 13)
+                    {
+                        //focus on this tab
+                        $("#auckland-locations").focus();
+                        
+                        //emulate click
+                        $("#al-button").click(); 
+                        
+                        //prevent default action
+                        return false;
+                    }
+                }
+            });
+        })();
+        
+    });
+    
+    //helper function to format text
+    var formatText = function(text) {
+        text = text || "";
+        if($.isArray(text))
+            return text.join().replace(/,/g, " ");
+        else 
+            return text;
+    };
+    
+    //from http://stackoverflow.com/a/3943985/462276
+    String.prototype.shuffle = function () {
+        var a = this.split(""), n = a.length;
+
+        for(var i = n - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = a[i];
+            a[i] = a[j];
+            a[j] = tmp;
+        }
+        return a.join("");
+    };
+    
+    //allows for uniform random letters
+    var _alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var _shuffledAlphabet = _alphabet.shuffle();
+    var randomLetter = function() {
+        if(_shuffledAlphabet.length == 0)
+            _shuffledAlphabet =  _alphabet.shuffle();
+        
+        var letter = _shuffledAlphabet.charAt(0);
+        _shuffledAlphabet = _shuffledAlphabet.substr(1);
+        return letter;
+    };
+    
+    //function to get the current selected tab
+    //from: http://stackoverflow.com/a/1335299/462276
+    var selectedTab = function() {
+        return $("#tabs").tabs('option', 'active');
+    };
+    
+    
+    
+    
+    var aucklandNames = ["Orua Bay","Big Bay","Grahams Beach","Manukau Harbour","PAPAKURA","Weymouth","MANUREWA","Ardmore","Muriwai Beach","Reweti","Woodhill","Wharepapa","Te Pua","Parakai","Parkhurst","Karekare","Huia","Piha","Waiatarua","Parau","Laingholm","Waitakere","Taupaki","Waitemata Harbour","PAPATOETOE","Whitford","AUCKLAND","Browns Island (Motukorea)","Motuihe Island","Waimauku","Waikoukou Valley","Huapai","Kumeu","Whenuapai","Riverhead","Paremoremo","Coatesville","Albany Village","Helensville","Loch Norrie","Waitoki","Kaukapakapa","Dairy Flat","Wainui","Silverdale","Orewa","Rangitoto Island","Motutapu Island","Rakino Island","The Noises","Okura","Stillwater","Whangaparaoa","Whangaparaoa Bay","Tiritiri Matangi Island","Glinks Gully","Redhill","Baylys Beach","Aratapu","Mahuta","Mount Wesley","Lake Taharoa","Maunganui","Aranga","Omamari","Maitahi","Mangatara","Parore","Dargaville","Awakino Point","Te Wharau","Kaihu River","Hoanga","Mamaranui","Maropiu","Kaihu","Waihue","Kairara","Avoca","Tutamoe","North Head","Waioneke","Lake Ototoa","Shelly Beach","South Head","South Head","Glorit","Tauhoa River","Lake Mokeno","Pouto Point","Taingaehe","Hukatere","Tapora","Kaipara Harbour","Wharehine","Oneriri","Oruawharo River","Oruawharo","Port Albert","Tinopai","Arapaoa","Whakapirau","Arapaoa River","Batley","Otamatea River","Kakanui","Makarau","Tahekeroa","Araparera","Komokoriki","Ahuroa","Waiwera","Puhoi","Mahurangi West","Pukapuka","Mangakura","Woodcocks","Tauhoa","Kaipara Flats","Hoteo","Kourawhero","Pohuehue","Hepburn Creek","Streamlands","Dome Valley","Warkworth","Mahurangi","Motuora Island","Algies Bay","Snells Beach","Motuketekete Island","Sandspit","Kawau Bay","Takatu","Kawau Island","Flat Rock","Takatu Point","Hoteo North","Hoteo River","Wayby","Wellsford","Wayby Valley","Waiteitei","Whangaripo","Te Hana","Topuni","Kaiwaka","Tomarata","Te Arai","Te Arai Point","Matakana","Omaha Flats","Big Omaha","Point Wells","Omaha","Whangateau","Omaha Bay","Ti Point","Pakiri","Leigh","Cape Rodney","Tikinui","Wairoa River","Ruawai","Tatarariki","Tokatoka","Naumai","Whenuanui","Rehia","Te Kowhai","Te Kopuru","Mititai","Arapohue","Okahu","Parahi","Ararua","Pahi","Matakohe","Marohemo","Paparoa","Wairere","Maungaturoto","Brynderwyn","Mareretu","Taipuha","Waikiekie","Braigh","North River","Windy Hill","Manganui River","Tangowahine","Pukehuia","Omana","Pikiwahine","Tangihua","Kirikopuni","Houto","Tangiteroria","Waiotama","Wheki Valley","Wharekohe","Whatitiri","Poroti","Waiotira","Ruarangi","Tauraroa","Maungakaramea","Moewhare","Mangapai","Springfield","Mata","Puwera","Otaika","Maungatapere","Otaika Valley","Oakleigh","Portland","Takahiwai","Whangarei Harbour","Toetoe","Onerahi","Tamaterau","Waikaraka","Owhiwa","Hakaru","Langs Beach","Mangawhai","Mangawhai Heads","Waipu Cove","Waipu","Bream Tail","Sail Rock","Taranga Island","Bream Bay","Ruakaka","Urquharts Bay","Hen and Chickens Islands","Bream Head","Ocean Beach","Marsden Bay","Taurikura","Whangarei Heads","Parua Bay","Taraunui","Taiharuru","Marotere Islands","Hunua","Cosseys Reservoir","Upper Mangatawhiri Reservoir","Kohukohunui","Firth of Thames","Ngarimu Bay","Waiomu","Ruamahunga","Te Puru","Table Mountain","Hikuai","Pauanui","Tairua","Shoe Island (Motuhoa)","Slipper Island (Whakahau)","Clevedon","Kawakawa Bay","Orere Point","Pakihi Island (Sandspit Island)","Beachlands","Maraetai","Tamaki Strait","Surfdale","Ostend","Onetangi","Waiheke Island","Ponui Island (Chamberlins Island)","Rotoroa Island","Pakatoa Island","Tapu","Te Mata","Waikawau","Kereta","Coromandel Peninsula","Manaia","Te Kouma","Coromandel Harbour","Whanganui Island","Oneroa","Palm Beach","Hauraki Gulf","Waimate Island","Motuoruhi Island (Goat Island)","Coromandel","Motukawao Group","Papaaroha","Amodeo Bay","Colville","Whangaahei","Maumaupaki (Camels Back)","Kakatarahae","COROMANDEL RANGE","Coroglen","Mill Creek","Whenuakite","Kaimarama","Whitianga","Purangi","Cooks Beach","Mercury Bay","Hot Water Beach","Hahei","Castle Island","Te Rerenga","Kennedy Bay","Kennedy Bay","Whangapoua","Matarangi","Kuaotunu","Waikawau","Opito","Ohinau Island","Opito Bay","Great Mercury Island (Ahuahu)","Kawhitu or Stanley Island","Mercury Islands (Iles d'Haussez)","Red Mercury Island (Whakau)","The Aldermen Islands","Port Jackson","Cape Colville","Moehau","Port Charles","Channel Island","Colville Channel","Hauturu/Little Barrier Island","Mount Hauturu","Tryphena Harbour","Tryphena","Okupu","Broken Islands (Pig Islands)","Kaikoura Island (Selwyn Island)","Port Abercrombie","Whangaparapara","Great Barrier Island (Aotea Island)","Claris","Mount Hobson","Port Fitzroy","Okiwi","Cuvier Island (Repanga Island)","Katherine Bay","Motairehe","Aiguilles Island","Mokohinau Islands","Rakitu Island (Arid Island)","Titoki","WHANGAREI","Pataua"];
+    </script>
+    <div id="wrapper">
+    
+        <h1> Phonetic Alphabet </h1>
+        
+        <div id="tabs">
+        
+            <ul>
+                <li><a href="#direct-input">Direct Input</a></li>
+                <li><a href="#random-letters">Random Letters</a></li>
+                <li><a href="#auckland-locations">Auckland Locations</a></li>
+            </ul>
+        
+            <div id="direct-input">
+                <input id="di-input" type="text" /> 
+                <p id="di-output">  </p>
+            </div>
+            
+            <div id="random-letters">
+                <p id="rl-letter">?</p>
+                <p id="rl-answer">?</p>
+                <button id="rl-button">Next</button>
+            </div>
+            
+            <div id="auckland-locations">
+                <p id="al-location">?</p>
+                <p id="al-answer">?</p>
+                <button id="al-button">Next Word</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
