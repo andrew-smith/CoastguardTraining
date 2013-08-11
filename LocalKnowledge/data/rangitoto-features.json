@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Coast Guard Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.792519",
+            "long": "174.831227"
+        }
+    },
+    {
+        "name": "Mckenzie Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.780177",
+            "long": "174.829714"
+        }
+    },
+    {
+        "name": "Boulder Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.768558",
+            "long": "174.879539"
+        }
+    },
+    {
+        "name": "Gardiner Gap",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.771480",
+            "long": "174.892628"
+        }
+    },
+    {
+        "name": "Islington Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.785533",
+            "long": "174.897842"
+        }
+    }
+]

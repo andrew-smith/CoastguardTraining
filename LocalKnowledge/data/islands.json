@@ -1,0 +1,191 @@
+[
+    {
+        "name": "Rangitoto Island",
+        "coords": [
+            -36.788918,
+            -185.141687
+        ]
+    },
+    {
+        "name": "Motutapu Island",
+        "coords": [
+            -36.766643,
+            -185.084524
+        ]
+    },
+    {
+        "name": "Rakino Island",
+        "coords": [
+            -36.719198,
+            -185.052123
+        ]
+    },
+    {
+        "name": "Otata Island",
+        "coords": [
+            -36.695588,
+            -185.02517
+        ]
+    },
+    {
+        "name": "Motuhoropapa Island",
+        "coords": [
+            -36.690074,
+            -185.03562
+        ]
+    },
+    {
+        "name": "Orarapa Island",
+        "coords": [
+            -36.697919,
+            -185.045552
+        ]
+    },
+    {
+        "name": "Maria Island",
+        "coords": [
+            -36.709067,
+            -184.994507
+        ]
+    },
+    {
+        "name": "Browns Island",
+        "coords": [
+            -36.831443,
+            -185.10598
+        ]
+    },
+    {
+        "name": "Motuihe Island",
+        "coords": [
+            -36.812045,
+            -185.051606
+        ]
+    },
+    {
+        "name": "Crusoe Island",
+        "coords": [
+            -36.812635,
+            -185.026865
+        ]
+    },
+    {
+        "name": "Waiheke Island",
+        "coords": [
+            -36.800213,
+            -184.891961
+        ]
+    },
+    {
+        "name": "Tarahiki Island",
+        "coords": [
+            -36.791148,
+            -184.77345
+        ]
+    },
+    {
+        "name": "Pakatoa Island",
+        "coords": [
+            -36.79692,
+            -184.805036
+        ]
+    },
+    {
+        "name": "Rotoroa Island",
+        "coords": [
+            -36.815057,
+            -184.801324
+        ]
+    },
+    {
+        "name": "Ponui Island",
+        "coords": [
+            -36.866941,
+            -184.815336
+        ]
+    },
+    {
+        "name": "Pakihi Island",
+        "coords": [
+            -36.907594,
+            -184.835484
+        ]
+    },
+    {
+        "name": "Tiritiri Matangi Island",
+        "coords": [
+            -36.600949,
+            -185.110507
+        ]
+    },
+    {
+        "name": "Watchman Island",
+        "coords": [
+            -36.83506,
+            -185.26809
+        ]
+    },
+    {
+        "name": "Kotanui Island",
+        "coords": [
+            -36.630903,
+            -185.219284
+        ]
+    },
+    {
+        "name": "Kawau Island",
+        "coords": [
+            -36.423976,
+            -185.137737
+        ]
+    },
+    {
+        "name": "Beehive Island",
+        "coords": [
+            -36.451891,
+            -185.178821
+        ]
+    },
+    {
+        "name": "Motuketekete Island",
+        "coords": [
+            -36.470354,
+            -185.190518
+        ]
+    },
+    {
+        "name": "Moturekareka Island",
+        "coords": [
+            -36.47415,
+            -185.201225
+        ]
+    },
+    {
+        "name": "Motuora Island",
+        "coords": [
+            -36.505411,
+            -185.207003
+        ]
+    },
+    {
+        "name": "Little Barrier Island",
+        "coords": [
+            -36.199738,
+            -184.919856
+        ]
+    },
+    {
+        "name": "Great Barrier Island",
+        "coords": [
+            -36.207806,
+            -184.585588
+        ]
+    },
+    {
+        "name": "Channel Island",
+        "coords": [
+            -36.421821,
+            -184.66856
+        ]
+    }
+]

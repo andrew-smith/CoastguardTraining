@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Create JSON</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+        var currentArray = [];
+        
+        function addNewItem(obj)
+        {
+            currentArray.push(obj);
+            
+            $("#output").text(JSON.stringify(currentArray, null, 4));
+        }
+        
+        
+        
+        $(function() {
+        
+            $("#submit").click(function() {
+                var place = {};
+                var coords = {};
+                place.name = $("#name").val();
+                //place.featureType = $("#feature").val();
+                
+                coords.lat = $("#lat").val();
+                coords.long = $("#long").val();
+                place.coords = coords;
+                
+                $("input").val("");
+                
+                addNewItem(place);
+            });
+        });
+        
+    </script>
+  </head>
+  <body style="font-family: Arial; border: 0 none;">
+  
+    Name: <input type="text" id="name" />  <br />
+    FeatureType: <input type="text" id="feature" />  <br />
+    Lat: <input type="text" id="lat" />  ||||  Long: <input type="text" id="long" />  <br />
+    
+    <button id="submit">Add New Place</button>
+  
+    <br />
+  
+    <textarea id="output"> </textarea>
+  </body>
+</html>
+​

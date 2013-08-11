@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Gardiner Gap",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.771480",
+            "long": "174.892628"
+        }
+    },
+    {
+        "name": "Islington Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.785533",
+            "long": "174.897842"
+        }
+    },
+    {
+        "name": "Emu Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.792854",
+            "long": "174.915781"
+        }
+    },
+    {
+        "name": "Home Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.769205",
+            "long": "174.932947"
+        }
+    },
+    {
+        "name": "Mullet Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.752949",
+            "long": "174.933484"
+        }
+    },
+    {
+        "name": "Station Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.748548",
+            "long": "174.931252"
+        }
+    },
+    {
+        "name": "Waikalabubu Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.737922",
+            "long": "174.925845"
+        }
+    },
+    {
+        "name": "Sandy Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.744731",
+            "long": "174.913743"
+        }
+    },
+    {
+        "name": "Administration Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.751952",
+            "long": "174.903529"
+        }
+    }
+]
