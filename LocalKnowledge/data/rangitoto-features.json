@@ -38,5 +38,21 @@
             "lat": "-36.785533",
             "long": "174.897842"
         }
+    },
+    {
+        "name": "Flax Point",
+        "featureType": "Point",
+        "coords": {
+            "lat": "-36.804204",
+            "long": "174.838668"
+        }
+    },
+    {
+        "name": "Illiomama Rock",
+        "featureType": "Rock",
+        "coords": {
+            "lat": "-36.804721",
+            "long": "174.885950"
+        }
     }
 ]
