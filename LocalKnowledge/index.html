@@ -59,10 +59,71 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
                 $("body").unmask();
             });
             
-            
             //jquery ui buttons
-            $("button").button();
+            $("#user-submit").button();
+            
+            //error message
+            $("#no-current-items-message").dialog({
+                modal: true,
+                autoOpen: false,
+                buttons: {
+                    Ok: function() {
+                        $( this ).dialog("close");
+                    }
+                }
+            });
+            
+            $("#user-submit").click(function() {
+                if(!isCurrentlyGuessing)
+                {
+                    nextItem();
+                }
+                else
+                {
+                    isCurrentlyGuessing = false;
+                    $("#user-submit").val("Next");
+                    $("#answer-text").text(currentlyGuessingItem.name);
+                    $("#answer-text").removeClass();
+                    if($("#user-input").val() == currentlyGuessingItem.name)
+                    {
+                        $("#answer-text").addClass("correct-color");
+                    }
+                    else
+                    {
+                        $("#answer-text").addClass("incorrect-color");
+                    }
+                }
+            });
         });
+        
+        
+        var isCurrentlyGuessing = false;
+        var currentlyGuessingItem;
+        
+        function nextItem() 
+        {
+        
+            if(currentItemsToDisplay.length > 0)
+            {
+                currentlyGuessingItem = 
+                    currentItemsToDisplay[Math.floor(Math.random() * currentItemsToDisplay.length)];
+                    
+                $("#answer-text").val("");
+                isCurrentlyGuessing = true;
+                
+                $("#user-submit").val("Check!");
+                $("#displayFeatureName").text(currentlyGuessingItem.featureType);
+                $("#answer-text").text("");
+            }
+            else
+            {
+                $("#no-current-items-message").dialog( "open" );
+            }
+            
+        
+        }
+        
+        
 
     </script>
   </head>
@@ -76,21 +137,35 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
 
             <div id="menu">
             
-                <p>
-                    What is this <span id="displayFeatureName">???</span> called?
-                    <input id="user-input" placeholder=" enter answer here" type="text" />
-                    <button class="center-element" id="user-submit">Check!</button>
-                </p>
+                <div style="float: left">
+                    <p>
+                        What is this <span id="displayFeatureName">???</span> called?
+                        <input id="user-input" placeholder=" enter answer here" type="text" />
+                        <span style="float:left;" id="answer-text">&nbsp;</span>
+                        <input type="submit" id="user-submit" value="Start!" />
+                        <br />
+                        <br />
+                        <br />
+                    </p>
+               </div>
                 
                 
                 
                 
+                <div style="float: left">
+                    <p class="bold-text center-text">Enable/Disable Features:</p>
+                    
+                    <div id="feature-selector"></div>
+                </div>
             
-                <p class="bold-text center-text">Enable/Disable Features:</p>
                 
-                <div id="feature-selector"></div>
-            
             </div>
+        </div>
+        
+        <div id="no-current-items-message" title="Error">
+            <p>
+            Please select some features by clicking on the tabs and enabling things.
+            </p>
         </div>
     </body>
 </html>

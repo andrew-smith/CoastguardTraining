@@ -32,6 +32,11 @@
     font-weight: bold;
 }
 
+#user-submit
+{
+    float: right;
+}
+
 #menu
 {
     padding: 0px;
@@ -42,6 +47,16 @@
 #user-input
 {
      width: 100%;
+}
+
+.correct-color
+{
+    color: #00CC00;
+}
+
+.incorrect-color
+{
+    color: #B80000;
 }
 
 
