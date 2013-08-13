@@ -1,7 +1,7 @@
 [
     {
         "name": "Rangitoto Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.788918,
             -185.141687
@@ -9,7 +9,7 @@
     },
     {
         "name": "Motutapu Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.766643,
             -185.084524
@@ -17,7 +17,7 @@
     },
     {
         "name": "Rakino Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.719198,
             -185.052123
@@ -25,7 +25,7 @@
     },
     {
         "name": "Otata Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.695588,
             -185.02517
@@ -33,7 +33,7 @@
     },
     {
         "name": "Motuhoropapa Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.690074,
             -185.03562
@@ -41,7 +41,7 @@
     },
     {
         "name": "Orarapa Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.697919,
             -185.045552
@@ -49,7 +49,7 @@
     },
     {
         "name": "Maria Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.709067,
             -184.994507
@@ -57,7 +57,7 @@
     },
     {
         "name": "Browns Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.831443,
             -185.10598
@@ -65,7 +65,7 @@
     },
     {
         "name": "Motuihe Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.812045,
             -185.051606
@@ -73,7 +73,7 @@
     },
     {
         "name": "Crusoe Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.812635,
             -185.026865
@@ -81,7 +81,7 @@
     },
     {
         "name": "Waiheke Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.800213,
             -184.891961
@@ -89,7 +89,7 @@
     },
     {
         "name": "Tarahiki Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.791148,
             -184.77345
@@ -97,7 +97,7 @@
     },
     {
         "name": "Pakatoa Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.79692,
             -184.805036
@@ -105,7 +105,7 @@
     },
     {
         "name": "Rotoroa Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.815057,
             -184.801324
@@ -113,7 +113,7 @@
     },
     {
         "name": "Ponui Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.866941,
             -184.815336
@@ -121,7 +121,7 @@
     },
     {
         "name": "Pakihi Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.907594,
             -184.835484
@@ -129,7 +129,7 @@
     },
     {
         "name": "Tiritiri Matangi Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.600949,
             -185.110507
@@ -137,7 +137,7 @@
     },
     {
         "name": "Watchman Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.83506,
             -185.26809
@@ -145,7 +145,7 @@
     },
     {
         "name": "Kotanui Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.630903,
             -185.219284
@@ -153,7 +153,7 @@
     },
     {
         "name": "Kawau Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.423976,
             -185.137737
@@ -161,7 +161,7 @@
     },
     {
         "name": "Beehive Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.451891,
             -185.178821
@@ -169,7 +169,7 @@
     },
     {
         "name": "Motuketekete Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.470354,
             -185.190518
@@ -177,7 +177,7 @@
     },
     {
         "name": "Moturekareka Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.47415,
             -185.201225
@@ -185,7 +185,7 @@
     },
     {
         "name": "Motuora Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.505411,
             -185.207003
@@ -193,7 +193,7 @@
     },
     {
         "name": "Little Barrier Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.199738,
             -184.919856
@@ -201,7 +201,7 @@
     },
     {
         "name": "Great Barrier Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.207806,
             -184.585588
@@ -209,7 +209,7 @@
     },
     {
         "name": "Channel Island",
-        "featureType": "island",
+        "featureType": "Island",
         "coords": [
             -36.421821,
             -184.66856

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Hauraki Gulf Islands",
+        "src": "islands.json",
+        "id": "hgislands"
+    },
+    {
+        "name": "Rangitoto Island Features",
+        "src": "rangitoto-features.json",
+        "id": "rangitoto"
+    },
+    {
+        "name": "North Shore Bays",
+        "src": "shore-bays.json",
+        "id": "nsbays"
+    },
+    {
+        "name": "Motutapu Island Features",
+        "src": "motutapu-features.json",
+        "id": "motutapu"
+    }
+]
