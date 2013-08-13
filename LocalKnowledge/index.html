@@ -110,7 +110,21 @@ Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
                     $("#user-submit").val("Next");
                     $("#answer-text").text(currentlyGuessingItem.name);
                     $("#answer-text").removeClass();
-                    if($("#user-input").val() == currentlyGuessingItem.name)
+                    
+                    var validAnswers = [];
+                    validAnswers.push(currentlyGuessingItem.name.toLowerCase());
+                    
+                    //remove the last "island" or "bay" 
+                    var itemName = currentlyGuessingItem.name;
+                    var itemParts = itemName.split(" ");
+                    var truncatedItemName = "";
+                    for(var i=0; i<itemParts.length-1; i++)
+                        truncatedItemName += itemParts[i] + " ";
+                        
+                    truncatedItemName = $.trim(truncatedItemName);
+                    validAnswers.push(truncatedItemName.toLowerCase());
+                    
+                    if($.inArray($.trim($("#user-input").val().toLowerCase()), validAnswers) >=0)
                     {
                         $("#answer-text").addClass("correct-color");
                     }
