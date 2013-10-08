@@ -35,9 +35,9 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul id="map-options" class="nav navbar-nav">
-            <li class="active"><a>Going North</a></li>
-            <li><a>Going South</a></li>
-            <li><a>Random</a></li>
+            <li data-state="north" class="active" ><a>Going North</a></li>
+            <li data-state="south"><a>Going South</a></li>
+            <li data-state="random"><a>Random</a></li>
           </ul>
         </div>
       </div>
@@ -53,9 +53,11 @@
                 </div>
             </div>
             <div class="col-md-6">
+                <h2 id="reveal-place">
+                    Name this place!
+                </h2>
                 <p>
-                
-                    <input type="submit" id="btn-next" value="Start!" />
+                    <button id="btn-reveal">Reveal!</button>
                 
                 </p>
             </div>

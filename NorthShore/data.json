@@ -1,0 +1,227 @@
+[
+    {
+        "name": "Karepiro Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.657076",
+            "long": "174.735537"
+        }
+    },
+    {
+        "name": "Long Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.683099",
+            "long": "174.753561"
+        }
+    },
+    {
+        "name": "Winstones Cove",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.699697",
+            "long": "174.756694"
+        }
+    },
+    {
+        "name": "Waiake Beach",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.702834",
+            "long": "174.752982"
+        }
+    },
+    {
+        "name": "Torbay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.707754",
+            "long": "174.753368"
+        }
+    },
+    {
+        "name": "Browns Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.714153",
+            "long": "174.750621"
+        }
+    },
+    {
+        "name": "Rothesay Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.721828",
+            "long": "174.752220"
+        }
+    },
+    {
+        "name": "Murrays Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.732699",
+            "long": "174.754350"
+        }
+    },
+    {
+        "name": "Mairangi Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.739578",
+            "long": "174.758170"
+        }
+    },
+    {
+        "name": "Campbells Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.745493",
+            "long": "174.762805"
+        }
+    },
+    {
+        "name": "Castor Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.761413",
+            "long": "174.768898"
+        }
+    },
+    {
+        "name": "Milford",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.767670",
+            "long": "174.770572"
+        }
+    },
+    {
+        "name": "Black Rock",
+        "featureType": "Rock",
+        "coords": {
+            "lat": "-36.774623",
+            "long": "174.776634"
+        }
+    },
+    {
+        "name": "Thorne Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.777745",
+            "long": "174.777256"
+        }
+    },
+    {
+        "name": "Takapuna Beach",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.790110",
+            "long": "174.778812"
+        }
+    },
+    {
+        "name": "St Leonards Beach",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.799045",
+            "long": "174.790661"
+        }
+    },
+    {
+        "name": "Narrow Neck Beach",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.811072",
+            "long": "174.800489"
+        }
+    },
+    {
+        "name": "Takapuna Head",
+        "featureType": "Head",
+        "coords": {
+            "lat": "-36.815951",
+            "long": "174.807227"
+        }
+    },
+    {
+        "name": "Cheltenham Beach",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.822409",
+            "long": "174.809372"
+        }
+    },
+    {
+        "name": "North Head",
+        "featureType": "Head",
+        "coords": {
+            "lat": "-36.828152",
+            "long": "174.812071"
+        }
+    },
+    {
+        "name": "Torpedo Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.829692",
+            "long": "174.807355"
+        }
+    },
+    {
+        "name": "Duders Beach",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.830619",
+            "long": "174.804265"
+        }
+    },
+    {
+        "name": "Devonport Beach",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.832440",
+            "long": "174.798815"
+        }
+    },
+    {
+        "name": "Stanley Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.828009",
+            "long": "174.779632"
+        }
+    },
+    {
+        "name": "Ngataringa Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.820898",
+            "long": "174.776886"
+        }
+    },
+    {
+        "name": "Shoal Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.811072",
+            "long": "174.765470"
+        }
+    },
+    {
+        "name": "Little Shoal Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.821619",
+            "long": "174.742210"
+        }
+    },
+    {
+        "name": "Chelsea Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.821860",
+            "long": "174.727705"
+        }
+    }
+]
+
