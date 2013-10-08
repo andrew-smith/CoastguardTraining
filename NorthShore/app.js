@@ -73,7 +73,7 @@ function loadGoogleMaps()
     map = new google.maps.Map(mapDiv[0], {
         center: new google.maps.LatLng(-36.836767,174.766281),
         zoom: 13,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        mapTypeId: google.maps.MapTypeId.SATELLITE
     });
     
     //display no labels on the map
