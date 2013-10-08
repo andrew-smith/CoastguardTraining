@@ -1,10 +1,66 @@
 [
     {
+        "name": "Okoromai Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.612990",
+            "long": "174.810805"
+        }
+    },
+    {
+        "name": "Hobbs Bay / Gulf Harbour",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.626286",
+            "long": "174.788661"
+        }
+    },
+    {
+        "name": "Matakatia Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.626975",
+            "long": "174.774156"
+        }
+    },
+    {
+        "name": "Little Manly Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.638219",
+            "long": "174.763560"
+        }
+    },
+    {
+        "name": "Arkles Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.642282",
+            "long": "174.750514"
+        }
+    },
+    {
         "name": "Karepiro Bay",
         "featureType": "Bay",
         "coords": {
             "lat": "-36.657076",
             "long": "174.735537"
+        }
+    },
+    {
+        "name": "Pohutukawa Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.668113",
+            "long": "174.747012"
+        }
+    },
+    {
+        "name": "Granny's Bay",
+        "featureType": "Bay",
+        "coords": {
+            "lat": "-36.673281",
+            "long": "174.747473"
         }
     },
     {
