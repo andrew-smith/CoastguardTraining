@@ -155,8 +155,7 @@ var gameInit = function() {
     
     
     //debug boat, coming from the right and moving to the left
-    
-    game.boats.push(createBoatTarget({x: 200, y:-300}, {x: -15, y:0}, 15));
+    //game.boats.push(createBoatTarget({x: 200, y:-300}, {x: -15, y:0}, 15));
     
     //debug testing boat
     //game.boats.push(createBoatTarget({x: 0, y:0}, 0.1, 0) );
