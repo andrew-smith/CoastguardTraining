@@ -1,5 +1,12 @@
 
 
+DEBUG_MODE = false;
+
+if(!DEBUG_MODE) {
+    $("#canvasDebug").hide();
+}
+
+
 var settings = {
     width : 400,
     height: 400
@@ -67,7 +74,7 @@ var createBoatTarget = function(startingPos, movementVector, boatRadius) {
                     
                     
                     g.beginPath();
-                        g.fillStyle = '#8ED6FF';
+                        g.fillStyle = '#FF9933';
                         g.arc(0, 0, self.boatRadius, 0, 2 * Math.PI, false);
                         g.fill();
                         
@@ -136,6 +143,8 @@ var gameInit = function() {
     game.lastRedraw = Date.now();
     
     game.boats = [];
+
+    game.centerVessel = createBoatTarget({x: 0, y:0}, {x: 0, y:0}, 18);
     
     //the position of the radar 
     game.x = 0;
@@ -144,13 +153,10 @@ var gameInit = function() {
     //how the game moves every second
     game.movementVector = {x:0, y:5};
     
-    //initial center boat
-    game.boats.push(createBoatTarget({x: 0, y:0}, {x: 0, y:0}, 18));
-    
     
     //debug boat, coming from the right and moving to the left
     
-    game.boats.push(createBoatTarget({x: 200, y:-200}, {x: -15, y:0}, 15));
+    game.boats.push(createBoatTarget({x: 200, y:-300}, {x: -15, y:0}, 15));
     
     //debug testing boat
     //game.boats.push(createBoatTarget({x: 0, y:0}, 0.1, 0) );
@@ -172,7 +178,7 @@ var gameloop = function() {
     
     var graphicContexts = [];
     
-    graphicContexts.push(debugGraphics);
+    if(DEBUG_MODE) graphicContexts.push(debugGraphics);
     
     if(game.lastRedraw + REDRAW_RATE <= now) {
         graphicContexts.push(getGraphics());
@@ -199,7 +205,7 @@ var gameloop = function() {
         
             drawBackground(g);
             
-            
+            game.centerVessel.draw(g);
             
             for(var idx in game.boats) {
                 game.boats[idx].draw(g);
@@ -215,6 +221,37 @@ var gameloop = function() {
 };
 
 
+var gameLoopId = null;
+
+game.start = function() {
+
+    if(!gameLoopId) {
+        game.lastUpdate = Date.now();
+        gameLoopId = setInterval(gameloop, 50);
+    }
+};
+
+
+game.stop = function() {
+
+    if(gameLoopId) {
+        clearInterval(gameLoopId);
+        gameLoopId = null;
+    }
+};
+
+
+game.isRunning = function() {
+    return gameLoopId !== null;
+};
+
+
+
+game.clearBoats = function() {
+    game.boats = [];
+};
+
+
 gameInit();
 
-var INTERVAL_ID = setInterval(gameloop, 50);
+//var INTERVAL_ID = setInterval(gameloop, 50);

@@ -14,7 +14,52 @@
     </canvas>
     <canvas id="canvasDebug" width="800" height="800" style="border:1px solid #000000;">
     </canvas>
+
+    <p> </p>
+
+    <button type="button" id="btnStartStop">Start</button>
+
+    |
+
+    Target Heading: 
+    <select id="targetHeading">
+    	<option value="N">N</option>
+    	<option value="NE">NE</option>
+    	<option value="E">E</option>
+    	<option value="SE">SE</option>
+    	<option value="S">S</option>
+    	<option value="SW">SW</option>
+    	<option value="W">W</option>
+    	<option value="NW">NW</option>
+    </select>
+
+    |
+
+    Target Starting Position: 
+
+    <select id="targetPosition">
+    	<option value="north_left">North Left</option>
+    	<option value="north">North</option>
+    	<option value="north_right">North Right</option>
+    	<option value="east_upper">East Upper</option>
+    	<option value="east">East</option>
+    	<option value="east_lower">East Lower</option>
+    	<option value="south_right">South Right</option>
+    	<option value="south">South</option>
+    	<option value="south_left">South Left</option>
+    	<option value="west_lower">West Lower</option>
+    	<option value="west">West</option>
+    	<option value="west_upper">West Upper</option>
+    </select>
     
+    |
+
+
+    <button type="button" id="btnSpawnBoat">Create New Boat</button>
+
+
+    <script src="jquery.js"></script>
     <script src="radar.js"></script>
+    <script src="controls.js"></script>
 </body>
 </html>
