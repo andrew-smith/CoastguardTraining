@@ -9,7 +9,7 @@ if(!DEBUG_MODE) {
 
 var settings = {
     width : 400,
-    height: 400
+    height: 450
 };
 
 
@@ -108,6 +108,8 @@ var drawBackground = function(g) {
 
 
 var drawRadarOverlay = function(g) {
+
+    var radarColour = '#003300';
     
     var radius = Math.min(getCanvas().width, getCanvas().height) / 6.5;
     
@@ -116,10 +118,22 @@ var drawRadarOverlay = function(g) {
             //inner
             g.arc(0, 0, radius * (i+1), 0, 2 * Math.PI, false);
             g.lineWidth = 2;
-            g.strokeStyle = '#003300';
+            g.strokeStyle = radarColour;
             g.stroke();
         g.closePath();
     }
+
+    g.beginPath();
+
+        g.font = "20px Georgia";
+
+        g.fillStyle = radarColour;
+        g.fillText("1/16", -15, -settings.width / 4);
+        g.fillText("1/8", -15, -settings.width / 1.77);
+        g.fillText("3/16", -15, -settings.width / 1.14);
+        g.fillText("1/4", -15, -settings.height + (settings.height * 0.04) );
+
+    g.closePath();
 };
 
 var drawRadarInformation = function(g) {
