@@ -84,12 +84,19 @@ Light.prototype.draw = function(g) {
 			var circleX = this.x - halfRad;
 			var circleY = this.y - halfRad;
 			
-			var gradient = g.createRadialGradient(circleX,circleY,halfRad,circleX,circleY,0);
+			g.translate(circleX, circleY);
+			
+			if(this.ttl) {
+				var scale = Math.sin((Math.PI / this.flashLength) * (this.flashLength - this.ttl));
+				g.scale(scale, scale);
+			}
+			
+			var gradient = g.createRadialGradient(0,0,halfRad,0,0,0);
 			gradient.addColorStop(0, "black"); // no alpha support :(
 			gradient.addColorStop(1, this.colour);
 			
 			g.fillStyle = gradient;
-			g.fillRect(circleX - halfRad, circleY - halfRad, rad, rad);
+			g.fillRect(0 - halfRad, 0 - halfRad, rad, rad);
 		
 		g.restore();
 	}
