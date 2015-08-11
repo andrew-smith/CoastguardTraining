@@ -95,15 +95,14 @@ FixedLight.prototype = Object.create(Light.prototype);
 
 
 
-function FlashingLight(opts) {
+var FlashingLight = function(opts) {
 	
 	opts = opts || {};
 	opts.flashType = FlashType.Fl;
-	opts.flashLength = 500;
-	opts.period = 5000;
-	opts.flashesPerPeriod = 2;
-	opts.flashPauseLength = 1000;
-	opts.isLit = false;
+	opts.flashLength = opts.flashLength || 400;
+	opts.period = opts.period || 5000;
+	opts.flashesPerPeriod = opts.flashesPerPeriod || 2;
+	opts.flashPauseLength = opts.flashPauseLength || 750;
 	
 	Light.call(this, opts);
 };
