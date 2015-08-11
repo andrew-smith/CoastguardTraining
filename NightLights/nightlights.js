@@ -112,13 +112,32 @@ game.gameloop = function() {
 var width = getCanvas().width;
 var height = getCanvas().height;
 
+//powered vessel
 game.nodes.push(new FixedLight({ colour:"red", x: width/2 - 50, y: height/2}));
 game.nodes.push(new FixedLight({ colour:"green", x: width/2 + 50, y: height/2}));
 game.nodes.push(new FixedLight({ colour:"white", x: width/2, y: height/2-50}));
 
 
 
+//browns bay reef marker
+game.nodes.push(new FlashingLight({ 
+    colour:"green",
+    x: width/2 - 250,
+    y: height/2,
+    flashLength:400,
+    period:5000,
+    flashesPerPeriod: 2,
+    flashPauseLength: 750}));
 
+//tiritiri
+game.nodes.push(new FlashingLight({ 
+    colour:"white",
+    x: width/2 + 200,
+    y: height/4,
+    flashLength:800,
+    period:3000,
+    flashesPerPeriod: 1,
+    radius: 55}));
 
 
 game.start();
