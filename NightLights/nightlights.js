@@ -23,6 +23,9 @@ var getGraphics = function(canvas) {
 
 var game = {};
 
+//stores all the nodes to draw
+game.nodes = [];
+
 game.drawBackground = function(g) {
     
     g.beginPath();
@@ -104,6 +107,11 @@ game.gameloop = function() {
     //clearInterval(INTERVAL_ID);
 };
 
+
+
+var testLight = new FixedLight({ colour:"#00FF00", x: getCanvas().width/2, y: getCanvas().height/2});
+
+game.nodes.push(testLight);
 
 
 
