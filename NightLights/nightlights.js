@@ -124,7 +124,7 @@ game.nodes.push(new FlashingLight({
     colour:"green",
     x: width/2 - 250,
     y: height/2,
-    flashLength:400,
+    flashLength:300,
     period:5000,
     flashesPerPeriod: 2,
     flashPauseLength: 750}));
@@ -134,10 +134,10 @@ game.nodes.push(new FlashingLight({
     colour:"white",
     x: width/2 + 200,
     y: height/4,
-    flashLength:800,
-    period:3000,
+    flashLength:550,
+    period:1500,
     flashesPerPeriod: 1,
-    radius: 55}));
+    radius: 40}));
 
 
 game.start();
