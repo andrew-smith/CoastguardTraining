@@ -109,9 +109,15 @@ game.gameloop = function() {
 
 
 
-var testLight = new FlashingLight({ colour:"#00FF00", x: getCanvas().width/2, y: getCanvas().height/2});
+var width = getCanvas().width;
+var height = getCanvas().height;
 
-game.nodes.push(testLight);
+game.nodes.push(new FixedLight({ colour:"red", x: width/2 - 50, y: height/2}));
+game.nodes.push(new FixedLight({ colour:"green", x: width/2 + 50, y: height/2}));
+game.nodes.push(new FixedLight({ colour:"white", x: width/2, y: height/2-50}));
+
+
+
 
 
 
