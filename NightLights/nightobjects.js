@@ -24,7 +24,10 @@ var Light = function(opts) {
 	this.lastUpdate = new Date();
 	
 	// if the light is currently lit
-	this.isLit = opts.isLit;
+	this.isLit = true;
+	if(typeof opts.isLit === "boolean") {
+		this.isLit = opts.isLit;
+	}
 	
 	// time to live - count down till the light state swaps
 	this.ttl = 0;
@@ -55,7 +58,7 @@ var Light = function(opts) {
 	this.flashLength = opts.flashLength || 0;
 	
 	// radius of the light 
-	this.radius = opts.radius || 5;
+	this.radius = opts.radius || 25;
 };
 
 
@@ -74,9 +77,19 @@ Light.prototype.draw = function(g) {
 		g.save();
 		
 		g.beginPath();
-			g.fillStyle = this.colour;
-			g.arc(this.x, this.y, this.radius, 0, TWOPI);
-			g.fill();
+		
+			var rad = this.radius;
+			var halfRad = rad/2;
+		
+			var circleX = this.x - halfRad;
+			var circleY = this.y - halfRad;
+			
+			var gradient = g.createRadialGradient(circleX,circleY,halfRad,circleX,circleY,0);
+			gradient.addColorStop(0, "black"); // no alpha support :(
+			gradient.addColorStop(1, this.colour);
+			
+			g.fillStyle = gradient;
+			g.fillRect(circleX - halfRad, circleY - halfRad, rad, rad);
 		
 		g.restore();
 	}
