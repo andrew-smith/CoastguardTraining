@@ -113,13 +113,14 @@ var width = getCanvas().width;
 var height = getCanvas().height;
 
 //powered vessel
-game.nodes.push(new FixedLight({ colour:"red", x: width/2 - 50, y: height/2}));
-game.nodes.push(new FixedLight({ colour:"green", x: width/2 + 50, y: height/2}));
+game.nodes.push(new FixedLight({ colour:"green", x: width/2 - 50, y: height/2}));
+game.nodes.push(new FixedLight({ colour:"red", x: width/2 + 50, y: height/2}));
 game.nodes.push(new FixedLight({ colour:"white", x: width/2, y: height/2-50}));
 
 
 
 //browns bay reef marker
+/*
 game.nodes.push(new FlashingLight({ 
     colour:"green",
     x: width/2 - 250,
@@ -138,6 +139,9 @@ game.nodes.push(new FlashingLight({
     period:1500,
     flashesPerPeriod: 1,
     radius: 40}));
-
+*/
 
 game.start();
+
+
+
