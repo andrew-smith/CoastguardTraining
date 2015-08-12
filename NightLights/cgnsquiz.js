@@ -4,6 +4,17 @@
 // The complete quiz for the night
 //
 
+$(function() {
+	$("body").keydown(function(e) {
+		if(e.keyCode === 39) {
+			nextRound();
+		}
+		else if(e.keyCode === 37) {
+			previousRound();
+		}
+	});
+
+});
 
 
 var round_index = 0;
@@ -43,9 +54,16 @@ var rounds = [];
 rounds.push([]);
 rounds.push([]);
 
-// fixed green nav
+// fixed green nav yacht
 rounds.push([
 	new FixedLight({ colour:"green", x: centerX , y: centerY})
+]);
+
+
+// fixed green nav powered vessel
+rounds.push([
+	new FixedLight({ colour:"green", x: centerX , y: centerY}),
+	new FixedLight({ colour:"white", x: centerX - 50 , y: centerY - 50}),
 ]);
 
 
