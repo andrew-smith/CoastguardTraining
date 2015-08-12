@@ -58,7 +58,7 @@ var Light = function(opts) {
 	this.flashLength = opts.flashLength || 0;
 	
 	// radius of the light 
-	this.radius = opts.radius || 25;
+	this.radius = opts.radius || 35;
 };
 
 
